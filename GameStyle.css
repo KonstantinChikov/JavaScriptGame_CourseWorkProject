@@ -5,7 +5,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    /* background-color: black; */
     background-image: url('./Images/Stone_Wall.png');
 }
 
@@ -13,7 +12,6 @@ body {
     background-image: url('./Images/frame_Big.png');
     background-size: 755px 757px;
     background-repeat: no-repeat;
-    /* background-color: #ccc; */
     width: 100vmin;
     height: 100vmin;
     display: grid;
@@ -26,6 +24,8 @@ body {
     background-image: url('./Images/snakeTale.png');
     background-size: 35px 35px;
     background-repeat: no-repeat;
+    /* background-color: green; */
+    /* border-radius: 20px; */
 }
 .snakeHead {
     background-image: url('./Images/snakeHead.png');
@@ -38,7 +38,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 .food {
     background-image: url('./Images/apple.png');
     /* background-image: url('./Images/mouse.png'); */
@@ -47,6 +46,10 @@ body {
 }
 
 #Score {
+    background-image: url('./Images/Score.png');
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+
     margin-left: 25px;
     margin-bottom: 550px;
     text-transform: uppercase;
