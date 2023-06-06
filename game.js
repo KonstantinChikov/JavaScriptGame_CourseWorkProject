@@ -9,17 +9,15 @@ const gameBoard = document.getElementById('game-board')
 
 function main(currentTime) {
   if (gameOver) {
-    if (confirm('You lost. Press ok to restart.')) {
+    if (confirm('\n \u3000 You LOST! \n Press OK to restart!')) {
       window.location = '/'
     }
     return
   }
 
-
   window.requestAnimationFrame(main)
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
   if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
-
 
   lastRenderTime = currentTime
 

@@ -1,13 +1,15 @@
 import { getInputDirection } from "./input.js"
 
-export const SNAKE_SPEED = 5
-const snakeBody = [{x: 11, y: 11}]
+export const SNAKE_SPEED = 5            // Slow -> 1 or 2 ; Medium -> 3 to 6 ; Hard -> 6 - 12 ;
+                                        // TODO: add/implement different difficulty levels for the player to chose from.
+const snakeBody = [{x: 11, y: 11}]      
 let newSegments	= 0
 
 export function update() {
-  addSegments()
 
+  addSegments()
   const inputDirection = getInputDirection()
+
   for (let i = snakeBody.length - 2; i >= 0; i--) {
     snakeBody[i + 1] = { ...snakeBody[i] }
   }
@@ -17,10 +19,12 @@ export function update() {
 }
 
 export function draw(gameBoard) {
+
   snakeBody.forEach((segment, index) => {
     const snakeElement = document.createElement('div')
     snakeElement.style.gridRowStart = segment.y
     snakeElement.style.gridColumnStart = segment.x
+
     if (index === 0) {
       snakeElement.classList.add('snakeHead')
     } else if(index === snakeBody.length - 1){
@@ -28,8 +32,10 @@ export function draw(gameBoard) {
     }else {
       snakeElement.classList.add('snake')
     }
+
     gameBoard.appendChild(snakeElement)
   })
+
 }
 
 export function expandSnake(amount) {
@@ -59,6 +65,5 @@ function addSegments() {
   for (let i = 0; i < newSegments; i++) {
     snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
   }
-
   newSegments = 0
 }
