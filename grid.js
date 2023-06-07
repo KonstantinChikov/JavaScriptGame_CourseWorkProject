@@ -1,4 +1,6 @@
 const GRID_SIZE = 18
+const GRID_MIN = 4;
+const GRID_MAX = GRID_SIZE;
 
 function randomPositionInGrid(randomPosition = {x: 0, y: 0}) {
   do {
@@ -14,7 +16,7 @@ export function randomGridPosition() {
 
 export function outsideGrid(position) {
   return (
-    position.x < 4 || position.x > GRID_SIZE ||
-    position.y < 4 || position.y > GRID_SIZE
+    position.x < GRID_MIN || position.x > GRID_MAX ||
+    position.y < GRID_MIN || position.y > GRID_MAX
   )
 }

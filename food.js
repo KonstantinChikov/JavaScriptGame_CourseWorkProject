@@ -3,7 +3,7 @@ import { randomGridPosition } from './grid.js'
 
 const scoreElement = document.getElementById('Score')
 
-let filer = "\u3000"
+let filler = "\u3000"
 let score = 0
 let food = getRandomFoodPosition()
 const EXPANSION_RATE = 2
@@ -14,7 +14,7 @@ export function update() {
     food = getRandomFoodPosition()
     score++
   }
-  scoreElement.innerHTML = `${filer} Score: ${score}`
+  scoreElement.innerHTML = `${filler} Score: ${score}`
 }
 
 export function draw(gameBoard) {

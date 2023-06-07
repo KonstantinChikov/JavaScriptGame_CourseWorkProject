@@ -1,9 +1,34 @@
 import { getInputDirection } from "./input.js"
 
-export const SNAKE_SPEED = 5            // Slow -> 1 or 2 ; Medium -> 3 to 6 ; Hard -> 6 - 12 ;
-                                        // TODO: add/implement different difficulty levels for the player to chose from.
-const snakeBody = [{x: 11, y: 11}]      
-let newSegments	= 0
+const diffSelect = document.getElementById('difficulty-select')
+let SNAKE_SPEED = 3;
+
+diffSelect.addEventListener('keydown', event => {
+  if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault()
+  }
+})
+
+diffSelect.onchange = () => {
+  updateSnakeSpeed(diffSelect.value)
+}
+
+function updateSnakeSpeed(difficulty) {
+  switch (difficulty) {
+    case 'easy':
+      SNAKE_SPEED = 3;
+      break;
+    case 'medium':
+      SNAKE_SPEED = 6;
+      break;
+    case 'hard':
+      SNAKE_SPEED = 12;
+      break;
+  }
+}
+
+const snakeBody = [{ x: 11, y: 11 }];
+let newSegments = 0;
 
 export function update() {
 
@@ -16,6 +41,8 @@ export function update() {
 
   snakeBody[0].x += inputDirection.x
   snakeBody[0].y += inputDirection.y
+
+  
 }
 
 export function draw(gameBoard) {
@@ -67,3 +94,5 @@ function addSegments() {
   }
   newSegments = 0
 }
+
+export { SNAKE_SPEED };

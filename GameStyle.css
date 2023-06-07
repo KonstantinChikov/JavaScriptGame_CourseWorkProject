@@ -27,11 +27,13 @@ body {
     /* background-color: green; */
     /* border-radius: 20px; */
 }
+
 .snakeHead {
     background-image: url('./Images/snakeHead.png');
     background-size: 35px 35px;
     background-repeat: no-repeat;
 }
+
 .snakeTaleEnd {
     background-image: url('./Images/snakeTaleEnd.png');
     background-size: 35px 35px;
@@ -50,9 +52,26 @@ body {
     background-size: 35px 35px;
     background-repeat: no-repeat;
 
-    margin-left: 25px;
-    margin-bottom: 550px;
-    /* text-transform: uppercase; */
+    margin-left: 30px;
+    margin-top: 300px;
+    margin-bottom: 80px;
     font-size: 2rem;
     color: #9e582c;
+}
+
+h2 {
+    margin-left: 30px;
+    font-size: 1.5rem;
+    color: #9e582c;
+}
+
+select {
+    margin-left: 65px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+    border: #9e582c 10px;
+    font-size: 1rem;
+    color: #9e582c;
+    margin-bottom: 80px;
 }
