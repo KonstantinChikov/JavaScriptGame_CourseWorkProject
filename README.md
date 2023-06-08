@@ -1,4 +1,4 @@
 # JavaScriptGame_CourseWorkProject
-![1S](https://github.com/KonstantinChikov/JavaScriptGame_CourseWorkProject/assets/91802179/c5a93cf9-ad6d-4c76-a6f2-62e4e0440cc5)
-![2S](https://github.com/KonstantinChikov/JavaScriptGame_CourseWorkProject/assets/91802179/1bae69c1-87ee-4ad2-9bbd-6280017607f2)
-![3S](https://github.com/KonstantinChikov/JavaScriptGame_CourseWorkProject/assets/91802179/870ff9ab-a702-4e50-9f2c-4109126ae4bd)
+# Snake Game
+![K1](https://github.com/KonstantinChikov/JavaScriptGame_CourseWorkProject/assets/91802179/a718e809-9ac9-4d6b-beb3-c4ab7be661e4)
+![K2](https://github.com/KonstantinChikov/JavaScriptGame_CourseWorkProject/assets/91802179/341a0411-f6f8-425d-9880-a240e0c13fc9)
