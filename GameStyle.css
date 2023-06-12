@@ -53,13 +53,32 @@ body {
     background-repeat: no-repeat;
 
     margin-left: 30px;
-    margin-top: 300px;
-    margin-bottom: 80px;
+    margin-top: 30px;
+    margin-bottom: 300px;
     font-size: 2rem;
     color: #9e582c;
 }
 
-h2 {
+#refreshButton{
+    background-color: whitesmoke;
+    height: 60px;
+    width: 62px;
+    border-radius: 20px;
+    border: #9e582c solid 2.5px;
+    color: #9e582c;
+    margin-left: 80px;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+
+#Toptext{
+    margin-left: 20px;
+    color: #9e582c;
+    /* text-transform: capitalize; */
+    font-size: 1.3rem;
+}
+
+#level{
     margin-left: 30px;
     font-size: 1.5rem;
     color: #9e582c;
@@ -70,8 +89,25 @@ select {
     font-size: 16px;
     padding: 5px;
     border-radius: 10px;
-    border: #9e582c 10px;
+    border: #9e582c solid 2px;
     font-size: 1rem;
     color: #9e582c;
     margin-bottom: 80px;
+    cursor: pointer;
+}
+
+#popup{
+    width: 400px;
+    height: 100px;
+    background-color: rgb(46, 10, 10);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 42.3%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 1%;
+    color: red;
+    border: red solid 3px;
+    visibility: hidden;
 }

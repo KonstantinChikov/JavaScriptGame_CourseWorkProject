@@ -5,13 +5,15 @@ import { outsideGrid } from './grid.js'
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
+const popup = document.getElementById('popup');
 
 
 function main(currentTime) {
   if (gameOver) {
-    if (confirm('\n \u3000 You LOST! \n Press OK to restart!')) {
-      window.location.reload();
-    }
+    // if (confirm('\n \u3000 You LOST! \n Press OK to restart!')) {
+    //   window.location.reload();
+    // }
+    showPopup();
     return
   }
 
@@ -42,3 +44,18 @@ function draw() {
 function checkDeath() {
   gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
 }
+
+
+function showPopup() {
+  popup.style.visibility = 'visible';
+}
+
+function hidePopup() {
+  popup.style.visibility = 'hidden';
+}
+
+const refreshButton = document.getElementById('refreshButton');
+refreshButton.addEventListener('click', function () {
+  hidePopup();
+  window.location.reload();
+});
