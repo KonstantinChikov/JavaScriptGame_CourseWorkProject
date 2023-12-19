@@ -7,10 +7,17 @@ let gameOver = false;
 const gameBoard = document.getElementById('game-board');
 const popup = document.getElementById('popup');
 
+backgroundMusic.play();
+
+function checkDeath() {
+  gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
+}
 
 function main(currentTime) {
   if (gameOver) {
       showPopup();
+      backgroundMusic.pause();
+      deathSound.play();
     return;
   }
 
@@ -37,11 +44,6 @@ function draw() {
   drawSnake(gameBoard);
   drawFood(gameBoard);
 }
-
-function checkDeath() {
-  gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
-}
-
 
 function showPopup() {
   popup.style.visibility = 'visible';

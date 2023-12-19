@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <title>Snake Game</title>
-            
-    <link rel="stylesheet" href="GameStyle.css">
-    <script src="game.js" defer type="module"></script>
+                <title>Snake Game</title>
+                
+        <link rel="stylesheet" href="GameStyle.css">
+        <script src="game.js" defer type="module"></script>
 
-</head>
+        <div>
+            <audio id="backgroundMusic" loop>
+                <source src="./Sounds/Clown(chosic.com).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="deathSound">
+                <source src="./Sounds/GameOver.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+    </head>
+
     <body>
-
             <div id="game-board"> </div>
+
             <div class="score-wrapper">
 
                 <div id="Score"> </div>
@@ -25,16 +37,16 @@
                 <h2 id="level">Difficulty Level</h2>
 
                 <select id="difficulty-select">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
                 </select>
 
-                    <div id="popup">
-                        <h1>! You Lost !</h3>
-                    </div>
-                    
+                <div id="popup">
+                    <h1 id="popuptext">! You Lost !</h3>
+                </div>
+                
             </div>
-
     </body>   
+
 </html>
